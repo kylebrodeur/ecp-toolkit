@@ -1,0 +1,12 @@
+# OS noise
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.venv/
+
+# Scratch
+.claude/

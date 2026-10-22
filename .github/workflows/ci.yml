@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v7
+        with:
+          version: "latest"
+      - name: Install
+        run: uv sync --group dev
+      - name: Tests
+        run: uv run pytest tests -q
+      - name: Lint
+        run: uv run ruff check .
+      - name: CLI smoke
+        run: uv run ecp --help

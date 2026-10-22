@@ -1,0 +1,37 @@
+# ecp-toolkit
+
+> The AI ECP control plane: one operator CLI (`ecp`) that mounts the
+> family's kit repos through per-repo command manifests, vendors
+> tag-pinned copies into consumer projects, and guards the vendor
+> boundary.
+
+## Docs
+
+- [AGENTS.md](AGENTS.md): the boundary, stated as rules an agent obeys
+- [docs/quickstart.md](docs/quickstart.md): from nothing to a mounted
+  fleet
+- [docs/how-to.md](docs/how-to.md): the tasks you repeat
+- [docs/RUNBOOK.md](docs/RUNBOOK.md): the full command surface, every
+  error string and its fix, and the recovery procedures
+- [CONTRIBUTING.md](CONTRIBUTING.md): setup, tests, and opening a change
+- [SECURITY.md](SECURITY.md): private vulnerability reporting
+- [skills/ecp-toolkit/SKILL.md](skills/ecp-toolkit/SKILL.md): the skill
+  for agents operating the control plane
+- [LICENSE](LICENSE): Apache-2.0
+
+## Family
+
+The AI Engineering Control Plane (AI ECP): independent kit repos run by
+rules an agent can execute. Members:
+
+- [repo-guards](https://github.com/kylebrodeur/repo-guards): the `guv`
+  repo-discipline gates
+- [actions-runner](https://github.com/kylebrodeur/actions-runner): the
+  `arun` local agent-pipeline runner
+- [omp-rpc-cli](https://github.com/kylebrodeur/omp-rpc-cli): persistent
+  `omp` RPC sessions
+
+## Status
+
+Implemented from the family's CLI design; not yet published to a
+package registry. Facts checked 2026-10-22.
