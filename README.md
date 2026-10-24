@@ -12,15 +12,22 @@ The full command surface and every error string with its fix:
 ## Install
 
 ```bash
-uv tool install ecp-toolkit
+uv tool install --from "git+https://github.com/kylebrodeur/ecp-toolkit@v0.1.0" ecp-toolkit
 ecp --help
 ```
 
-Until the first registry wave, install from a checkout:
+The install names the **package** (`ecp-toolkit`), not the console
+script (`ecp`); `uv` rejects the script name, because the two are
+different things.
+
+**`ecp-toolkit` is not on PyPI yet.** The registry entry is DECIDED
+and PENDING, and the route above is the one that works today. A bare
+`uv tool install ecp-toolkit` fails, because there is no such package
+on PyPI.
+
+To run it without installing:
 
 ```bash
-uv tool install --from <path-to-ecp-toolkit> ecp-toolkit
-# or run without installing:
 uv run --project <path-to-ecp-toolkit> ecp --help
 ```
 

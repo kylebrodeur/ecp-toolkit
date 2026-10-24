@@ -7,8 +7,15 @@ description: Use when operating a consumer project through the ecp control plane
 
 `ecp` mounts the family's kit repos. Each kit repo ships an
 `ecp-commands.toml`; the CLI offers exactly what the manifests declare,
-plus the fleet-level verbs. Install with `uv tool install ecp-toolkit`
-(from a checkout until the registry wave).
+plus the fleet-level verbs. Install it with:
+
+```bash
+uv tool install --from "git+https://github.com/kylebrodeur/ecp-toolkit@v0.1.0" ecp-toolkit
+```
+
+The PyPI entry is DECIDED and PENDING, so the route above is the one
+that works today. A bare `uv tool install ecp-toolkit` fails: there is
+no such package on PyPI.
 
 ## The commands
 

@@ -7,13 +7,19 @@ You need: Python 3.11 or newer and `uv` (`git` for the vendor flow).
 
 ## 1. Get the CLI
 
-The CLI is not published to a package registry yet. From a checkout:
+The CLI is not published to a package registry yet. The registry entry
+is DECIDED and PENDING; the route below is the one that works today.
 
 ```bash
-uv tool install --from /path/to/ecp-toolkit ecp-toolkit   # package name, not the script name
+uv tool install --from "git+https://github.com/kylebrodeur/ecp-toolkit@v0.1.0" ecp-toolkit
 # or run without installing:
 uv run --project /path/to/ecp-toolkit ecp --help
 ```
+
+The install names the **package** (`ecp-toolkit`), not the console
+script (`ecp`); `uv` rejects the script name, because the two are
+different things. A bare `uv tool install ecp-toolkit` fails, because
+there is no such package on PyPI.
 
 Expected output (the same surface for both forms, `--help` observed live):
 
