@@ -1,9 +1,15 @@
 ---
 name: ecp-boundary
-description: Use when working with AI ECP repos, vendored copies, or a consumer project that uses the ecp control plane: when to vendor, what may be edited, where decisions belong, and why a kit checkout is source rather than a target.
+description: Use when working with AI ECP repos, vendored copies, or a consumer project that uses the ecp control plane: when to vendor, what may be edited, where decisions belong, and why a kit checkout is source rather than a target. This copy IS canonical; the public toolkit repo ships an identical copy.
 ---
 
 # The ECP boundary: source, vendor, overlay
+
+This skill's canonical body ships in the public control-plane repo
+(`kylebrodeur/ecp-toolkit`, `skills/ecp-boundary/`); this private copy is
+kept byte-identical for the operator's own harness. When the body
+changes, change BOTH in the same commit and re-run the harness; a drift
+between the two is a bug.
 
 Three rules decide every action in the AI ECP. Everything else is detail.
 
