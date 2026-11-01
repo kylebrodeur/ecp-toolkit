@@ -71,5 +71,5 @@ ecp repo-guards check .               # a mounted kit command (passthrough)
 ## The family rule this mounts
 
 Source, vendor, overlay: the three rules that decide every action are
-the `ecp-boundary` skill (the system repo's `skills/ecp-boundary/`).
-This repo's CLI is the mechanical form of those rules.
+the `ecp-boundary` skill (the sibling `skills/ecp-boundary/` in this
+repo). This repo's CLI is the mechanical form of those rules.

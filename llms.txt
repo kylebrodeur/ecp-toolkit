@@ -17,6 +17,9 @@
 - [SECURITY.md](SECURITY.md): private vulnerability reporting
 - [skills/ecp-toolkit/SKILL.md](skills/ecp-toolkit/SKILL.md): the skill
   for agents operating the control plane
+- skills/ecp-boundary/, skills/ecp-release/, skills/ecp-catalog/,
+  skills/ecp-agent-team/, skills/ecp-upgrade/: the control plane's
+  skill pack, one boundary each
 - [LICENSE](LICENSE): Apache-2.0
 
 ## Family

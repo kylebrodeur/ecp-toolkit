@@ -67,14 +67,23 @@ must be the thing that runs.
 uv run pytest tests -q
 ```
 
-## The skill
+## The skills
 
-`ecp-toolkit` ships one skill teaching this repo's boundary:
+The repo ships the control plane's skill pack (agentskills.io spec, one
+`SKILL.md` per boundary), installable into any agent harness alongside
+its own skill:
 
-```bash
-# the agentskills.io SKILL.md, in this repo
-skills/ecp-toolkit/SKILL.md
+```text
+skills/ecp-toolkit/SKILL.md   operating the ecp CLI itself
+skills/ecp-boundary/SKILL.md  source, vendor, overlay: the three rules
+skills/ecp-release/SKILL.md   what makes a release published
+skills/ecp-catalog/SKILL.md   reading the family catalog
+skills/ecp-agent-team/SKILL.md  the two team operating modes
+skills/ecp-upgrade/SKILL.md   upgrading an already-set-up install
 ```
+
+Copy a skill's directory into your harness's skill root to load it. One
+skill, one boundary.
 
 ## Family
 
